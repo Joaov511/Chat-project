@@ -9,13 +9,13 @@ const form = document.getElementById("formTextInput");
     if(messageInput.value) {
         messageElementCreate();
     }
-});
+});*/
 
 messageInput.addEventListener("keypress", function(event) {
-    if(event.key == "Enter" && messageInput.value) {
-        messageElementCreate();
+    if(event.key == "Enter") {
+        form.submit();
     }
-})*/
+})
 
 
 
@@ -39,27 +39,27 @@ function messageElementCreate() {
     
 }
 
-form.addEventListener('submit', function(event) {
-    
-    
-    let message = messageInput.value;
-    let container = document.createElement("div");
-    let userName = document.createElement("label");
-    let messageText = document.createElement("div");
-    userName.innerHTML = "Markus";
-    userName.classList.add("sender");
-    
-    messageText.classList.add("content");
-    messageText.innerHTML = message;
+form.addEventListener('submit', function() {
+        if(messageInput.value) {
+            let message = messageInput.value;
+            let container = document.createElement("div");
+            let userName = document.createElement("label");
+            let messageText = document.createElement("div");
+            userName.innerHTML = "Markus";
+            userName.classList.add("sender");
         
-    container.appendChild(userName);
-    container.appendChild(messageText);
-    messages.appendChild(container);
-    container.classList.add("messageanim");
-    messageInput.value = "";
-    messages.scrollTop +=  100;
-
+            messageText.classList.add("content");
+            messageText.innerHTML = message;
+            
+            container.appendChild(userName);
+            container.appendChild(messageText);
+            messages.appendChild(container);
+            container.classList.add("messageanim");
+            messages.scrollTop +=  100;
+        }
+});
     
-})
+    
+
 
 
