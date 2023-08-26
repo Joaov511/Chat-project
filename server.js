@@ -21,7 +21,7 @@ function mySqlConnect() {
   });
 }
 
-const con = mysql.createConnection({
+/*const con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password : "1234",
@@ -30,7 +30,7 @@ const con = mysql.createConnection({
 
 con.connect(function(err) {
   console.log("Connected");
-});
+});*/
 
 function mysqlQuery(data) {
   const query = 'insert into messages(content) values(?);';
@@ -46,8 +46,9 @@ function mysqlQuery(data) {
 
 app.post('/', (req,res) => {
   if(req.body.textInput != "") {
-    mysqlQuery(req.body.textInput);
+    //mysqlQuery(req.body.textInput);
   }
+  console.log(re.body.textInput);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

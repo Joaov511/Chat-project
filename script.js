@@ -17,6 +17,10 @@ messageInput.addEventListener("keypress", function(event) {
     }
 })
 
+messageInput.addEventListener("click", function() {
+    messageInput.innerHTML="";
+})
+
 
 
 function messageElementCreate() {

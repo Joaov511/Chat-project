@@ -12,7 +12,9 @@
     <section id="sideBar">
         <h1>Hello, <span>Markus</span></h1>
     </section>
-    <img width="100%" height="100%" src="wave-haikei (1).svg" id="bg1"></img>
+    <div id="bg1">
+    <img width="100%" height="100%" src="wave-haikei (1).svg"></img>
+    </div>
     <main id="main1">
         <section id="messages">
             <div class="message">
@@ -26,7 +28,7 @@
         </section>
         <footer>
             <form method="post" id="formTextInput"  action='http://localhost:3060'>
-                <input type="text" name="textInput" id="textInput" placeholder="Type your message">
+                <span id="textInput" contenteditable="true" role="textbox" spellcheck="false">Type a message</span>
                 <button type="submit" id="sendBtnInvisible"></button>
                 <img src="arrow-forward-outline.svg" id="sendBtn" alt=""></img>
             </form>
