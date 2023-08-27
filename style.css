@@ -109,10 +109,14 @@ footer {
     max-height: 10vh;
 }
 
+#hiddenInput {
+    display: none;
+}
+
 #sendBtn {
     position: absolute;
     bottom: 18px;
-    left: 68.2%;
+    left: 70.5%;
     width: 30px;
     height: 30px;
     transition: 0.2s;   
@@ -167,7 +171,14 @@ footer {
     #bg1 {
         margin-left: 0;
         margin-left: -13em;
-        aspect-ratio: 18/9; 
+        aspect-ratio: 17/9; 
+        overflow-x: hidden;
+    }
+    .content {
+        width: 16em;
+    }
+    #sendBtn {
+        left: 72%;
     }
 }
 

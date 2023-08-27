@@ -23,7 +23,7 @@ function mySqlConnect() {
 
 /*const con = mysql.createConnection({
   host: "localhost",
-  user: "root",
+  user: "root",e
   password : "1234",
   database : "chatApp"
 });
@@ -45,10 +45,11 @@ function mysqlQuery(data) {
 
 
 app.post('/', (req,res) => {
-  if(req.body.textInput != "") {
+  /*if(req.body.textInput != "") {
     //mysqlQuery(req.body.textInput);
-  }
-  console.log(re.body.textInput);
+  }*/
+  console.log(req.body.hiddenInput);
+  res.status(204).send();
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
