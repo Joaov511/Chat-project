@@ -45,6 +45,52 @@ main {
     background-color: rgb(42, 45, 53);
 }
 
+#group {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    width: 20em;
+    background-color: rgb(20, 21, 24);
+    transition: 0.15s;
+    
+}
+
+#group:hover {
+    background-color: rgb(58, 58, 58);
+}
+
+.groupImage {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    
+}
+
+.groupName {
+    font-size: 1.3rem;
+    padding-top: 5px;
+    height: 1.5em;
+    width: 8em;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+}
+
+.lastMessage {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    transform: translateX(-10.5em);
+    font-size: 0.8rem;
+    padding-bottom: 8px;
+    width: 10em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 #sideBar h1 {
     font-family: 'Inter', sans-serif;
     padding-left: 10px;
@@ -75,9 +121,11 @@ main {
 .content {
     width: 25em;
     background-color: rgb(39, 138, 163);
+    height: fit-content;
     color: white;
     border-radius: 9px;
     padding: 10px;
+    word-break: break-all;
     font-size: 0.9rem;
     font-family: 'Inter', sans-serif;
     display: flex;
