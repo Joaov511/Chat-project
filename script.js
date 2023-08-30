@@ -9,12 +9,13 @@ const hiddenInput  = document.getElementById("hiddenInput");
 messageInput.addEventListener("keypress", function(event) {
     if(event.key == "Enter" && event.shiftKey) {
     }
-    else if(event.key == "Enter" && messageInput.innerHTML != "" && !event.shiftKey) {
+    else if(event.key == "Enter" && !event.shiftKey) {
         event.preventDefault();
-        messageElementCreate();
-        messageInput.innerText = "";
-        messageInput.reset();
-        form.submit();
+        if(messageInput.innerHTML != ""){
+            messageElementCreate();
+            messageInput.innerText = "";
+            form.submit(); 
+        }
     }
 });
 
@@ -28,6 +29,7 @@ sendBtn.addEventListener('click', function(event) {
         messageInput.innerText = "";
         messageInput.reset();
         form.submit();
+        messageInput.innerText = ''
     }
 })
 

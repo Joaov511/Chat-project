@@ -48,15 +48,15 @@ main {
 #group {
     font-family: 'Inter', sans-serif;
     display: flex;
-    width: 20em;
-    background-color: rgb(20, 21, 24);
+    border-radius: 35px;
+    width: 19em;
+    background-color: rgb(61, 63, 68);
     transition: 0.15s;
-    
+    cursor: pointer;
 }
 
-#group:hover {
-    background-color: rgb(58, 58, 58);
-}
+
+
 
 .groupImage {
     width: 52px;
@@ -65,8 +65,8 @@ main {
     flex-direction: row;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
-    
+    margin-left: 10px;
+    border-radius: 50%; 
 }
 
 .groupName {
@@ -83,7 +83,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    transform: translateX(-10.5em);
+    transform: translateX(-10em);
     font-size: 0.8rem;
     padding-bottom: 8px;
     width: 10em;
@@ -101,7 +101,7 @@ main {
 
 
 #messages {
-    height: 650px;
+    height: 800px;
     overflow-y: auto;
 }
 
@@ -156,6 +156,8 @@ footer {
     white-space: pre-wrap;
     max-height: 10vh;
 }
+
+
 
 #hiddenInput {
     display: none;
