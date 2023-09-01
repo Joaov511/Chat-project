@@ -50,12 +50,18 @@ main {
     display: flex;
     border-radius: 35px;
     width: 19em;
-    background-color: rgb(61, 63, 68);
+    /*background-color: rgb(61, 63, 68);*/
+    background-color: rgb(24, 25, 29);
     transition: 0.15s;
     cursor: pointer;
 }
 
-
+#group:hover {
+    translate: 0px -2px;
+    transition: 0.25s;
+    transition-property: box-shadow;
+    box-shadow: 1px 3px 10px rgb(240, 231, 231) ;
+}
 
 
 .groupImage {
